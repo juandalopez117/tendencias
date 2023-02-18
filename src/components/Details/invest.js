@@ -1,7 +1,7 @@
 let Lista = [
   {
     id: 1,
-    name: "William Albeiro Alvarez Valle (PhD)",
+    name: "William Albeiro Alvarez Valle (PhD) - Director Grupo de investigación TENDENCIAS",
     projects: [
       "Investigador, Mercado Laboral en el Oriente Antioqueño, Universidad de Antioquia - UCO, 2021",
       "Investigador, Mercado Laboral en el Oriente Antioqueño, Universidad de Antioquia - UCO, 2019.",
@@ -89,7 +89,7 @@ let Lista = [
 
   {
     id: 9,
-    name: "Alderid Gutiérrez(Mg)",
+    name: "Alderid Gutiérrez (Mg)",
     publish: [],
     projects: [],
   },
@@ -105,5 +105,7 @@ const Ordering = (a, b) => {
   }
 };
 
-let Lista2 = Lista.sort(Ordering);
+let newList = Lista.slice(1, Lista.length);
+
+let Lista2 = [Lista[0]].concat(newList.sort(Ordering));
 module.exports = Lista2;

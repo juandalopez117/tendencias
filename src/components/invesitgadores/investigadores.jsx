@@ -16,6 +16,9 @@ const Investigadores = () => {
     setLoading(false);
   }, []);
 
+  const director = invest.filter((el) => el.id === 1);
+  console.log(invest);
+
   return (
     <Box id="investigadores" sx={{}}>
       {loading === false ? (
